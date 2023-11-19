@@ -13,5 +13,21 @@ public class Main {
             System.out.println("Elemento: " + elemento);
         }
 		
+        
+// 		EXTRA
+		
+ 		System.out.println("\n---------------\n");
+ 		
+ 		IteratoreElementi c1 = new IteratoreElementi();
+ 		
+ 		c1.addElemento(6);
+ 		c1.addElemento(7);
+ 		c1.addElemento(8);
+ 		c1.addElemento(9);
+ 		c1.addElemento(10);
+ 		
+ 		while (c1.hasAncoraElementi()) {
+ 			System.out.println(c1.getElementoSuccessivo());
+ 		}
 	}
 }

@@ -9,6 +9,14 @@ package org.java.ciclabile;
 	        setElencoInteri(elencoInteri);
 	        setIndice(0);
 	    }
+	    
+
+
+	    public IteratoreElementi() {
+
+	   			setElencoInteri(new int[0]);
+	   			setIndice(0);
+	   		}
 	   
 	    public int[] getElencoInteri() {
 			return elencoInteri;
@@ -39,5 +47,17 @@ package org.java.ciclabile;
 	    public boolean hasAncoraElementi() {
 	        return indice < elencoInteri.length;
 	    }
+	    
+//		METODO CHE PERMETTE DI AGGIUNGERE UN NUOVO ELEMENTO
+	    public void addElemento(int elemento) {
+	   			
+	   			int[] nuovoElenco = new int[getElencoInteri().length + 1];
+	   			
+	   			System.arraycopy(getElencoInteri(), 0, nuovoElenco, 0, getElencoInteri().length);
+	   			
+	   			nuovoElenco[getElencoInteri().length] = elemento;
+	   			
+	   			setElencoInteri(nuovoElenco);
+	   	}
 	}
 
